@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #image,
+        button {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+
+
+        #button {
+            height: 50px;
+        }
+
+        .on,
+        .off {
+            color: #fff;
+            font-size: 20px;
+            line-height: 50px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .on {
+            background-color: green;
+        }
+
+        .off {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img id="image" src="bulb_off.gif" alt="">
+    <button id="button" onclick="toggle_bulb()" class="on">ON</button>
+
+
+    <script>
+        function toggle_bulb() {
+            var button = document.getElementById('button');
+            var image = document.getElementById('image');
+            if (button.className == "on") {
+                image.src = "bulb_on.gif";
+                button.className = "off"
+                button.innerHTML = "OFF";
+            }
+
+            else {
+                image.src = "bulb_off.gif";
+                button.className = "on"
+                button.innerHTML = "ON";
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
